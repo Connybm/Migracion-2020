@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.Odbc;
+
+namespace Recepcion
+{
+    class SQL_Mayores
+    {
+        SQL_Conexion conectar = new SQL_Conexion();
+		public void Ingresar_Mayores(string cui, string urlMayor)
+		{
+			string sql = "INSERT INTO documentos(nombre_tramite,cui,url_documento,estado_tramite)" +
+				"  VALUES ('" + "DPI" + "','" + cui + "','" + urlMayor + "','Activado');" +
+				"  VALUES ('" + "Boleto de Ornato" + "','" + cui + "','" + urlMayor + "','Activado');";
+			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
+			command.ExecuteNonQuery();
+
+		}
+	}
+}

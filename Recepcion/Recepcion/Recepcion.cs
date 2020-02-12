@@ -18,6 +18,13 @@ namespace Recepcion
             InitializeComponent();
         }
 
+        string cui;
+
+        public void obtenerCui(string cui)
+        {
+            this.cui = cui;
+        }
+
         public string TipoTramite = " ";
 
         public void AsignarPestana(String Tipo)
@@ -374,11 +381,8 @@ namespace Recepcion
         private void Btn_EnviarMenor_Click(object sender, EventArgs e)
         {
             SQL_Menores users = new SQL_Menores();
-            users.Ingresar_Menores(Txt_DPIPadre.Text, Txt_DPIPadreCopia.Text);
-            users.Ingresar_Menores(Txt_DPIMadre.Text, Txt_DPIMadreCopia.Text);
-            users.Ingresar_Menores(Txt_DPIPadre.Text, Txt_CertiNaci.Text);//
-            users.Ingresar_Menores(Txt_DPIPadre.Text, Txt_CartaPoder.Text);//
-            users.Ingresar_Menores(Txt_BoletoOrnatoMenor.Text, Txt_DPIPadreCopia.Text);
+            users.Ingresar_Menores(cui, Txt_DPIMadre.Text, Txt_DPIPadre.Text, Txt_DPIPadreCopia.Text, Txt_DPIMadreCopia.Text,
+                Txt_CertiNaci.Text, Txt_CartaPoder.Text, Txt_BoletoOrnatoMenor.Text, Txt_BoletoOrnatoCopiaMenor.Text, Txt_BoletaMenor.Text);
             this.Hide();
         }
 
@@ -392,8 +396,7 @@ namespace Recepcion
         private void Btn_EnviarMayores_Click(object sender, EventArgs e)
         {
             SQL_Mayores users = new SQL_Mayores();
-            users.Ingresar_Mayores(Txt_DPIMayores.Text, Txt_DPICopiaMayores.Text);
-            users.Ingresar_Mayores(Txt_BoletoOrnatoMayores.Text, Txt_BoletoOrnatoCopiaMayores.Text);
+            users.Ingresar_Mayores(Txt_DPIMayores.Text, Txt_DPICopiaMayores.Text, Txt_BoletoOrnatoMayores.Text);
             this.Hide();
         }
 

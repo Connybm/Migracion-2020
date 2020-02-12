@@ -10,11 +10,11 @@ namespace Recepcion
     class SQL_Mayores
     {
         SQL_Conexion conectar = new SQL_Conexion();
-		public void Ingresar_Mayores(string cui, string urlMayor)
+		public void Ingresar_Mayores(string cui, string urlMayor, string urlOrnato)
 		{
 			string sql = "INSERT INTO documentos(nombre_tramite,cui,url_documento,estado_tramite)" +
 				"  VALUES ('" + "DPI" + "','" + cui + "','" + urlMayor + "','Activado');" +
-				"  VALUES ('" + "Boleto de Ornato" + "','" + cui + "','" + urlMayor + "','Activado');";
+				"  VALUES ('" + "Boleto de Ornato" + "','" + cui + "','" + urlOrnato + "','Activado');";
 			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
 			command.ExecuteNonQuery();
 

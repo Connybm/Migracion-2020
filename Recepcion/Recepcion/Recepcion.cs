@@ -38,20 +38,39 @@ namespace Recepcion
 
         private void Btn_DPIMayoresACopia_Click(object sender, EventArgs e)
         {
-            Ofd_MayoresA.InitialDirectory = "C:\\";
-            Ofd_MayoresA.Filter = "Archivo PDF (*.PDF)|*.PDF";
+            /*
+               Ofd_MayoresA.InitialDirectory = "C:\\Documents";
+               Ofd_MayoresA.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
-            if (Ofd_MayoresA.ShowDialog() == DialogResult.OK)
+               if (Ofd_MayoresA.ShowDialog() == DialogResult.OK)
+               {
+                   try
+                   {
+                       this.fileUpload = Ofd_MayoresA.FileName.ToString();
+                       nombre = this.fileUpload.Split('\\');
+                       string sRutaMayoresA = Ofd_MayoresA.FileName;
+                       Txt_DPICopiaMayoresA.Text = sRutaMayoresA;
+                   }
+                   catch (Exception)
+                   {
+                       throw;
+                   }
+               }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
             {
-                try
-                {
-                    string sRutaMayoresA = Ofd_MayoresA.FileName;
-                    Txt_DPICopiaMayoresA.Text = sRutaMayoresA;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_DPICopiaMayoresA.Text = nombre[nombre.Length - 1];
             }
         }
 
@@ -67,6 +86,7 @@ namespace Recepcion
 
         private void Btn_DPIMayoresCopia_Click(object sender, EventArgs e)
         {
+            /*
             Ofd_Mayores.InitialDirectory = "C:\\Documents";
             Ofd_Mayores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
@@ -82,11 +102,28 @@ namespace Recepcion
                     throw;
                 }
             }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_DPICopiaMayores.Text = nombre[nombre.Length - 1];
+            }
         }
 
         private void Btn_BoletoOrnatoCopiaMayores_Click(object sender, EventArgs e)
         {
-            Ofd_Mayores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Mayores.InitialDirectory = "C:\\Documents";
             Ofd_Mayores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_MayoresA.ShowDialog() == DialogResult.OK)
@@ -100,6 +137,22 @@ namespace Recepcion
                 {
                     throw;
                 }
+            }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_BoletoOrnatoCopiaMayores.Text = nombre[nombre.Length - 1];
             }
         }
 
@@ -120,7 +173,8 @@ namespace Recepcion
 
         private void Btn_DPICopiaPadre_Click(object sender, EventArgs e)
         {
-            Ofd_Menores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Menores.InitialDirectory = "C:\\Documents";
             Ofd_Menores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_Menores.ShowDialog() == DialogResult.OK)
@@ -135,11 +189,28 @@ namespace Recepcion
                     throw;
                 }
             }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_DPIPadreCopia.Text = nombre[nombre.Length - 1];
+            }
         }
 
         private void Btn_DPICopiaMadre_Click(object sender, EventArgs e)
         {
-            Ofd_Menores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Menores.InitialDirectory = "C:\\Documents";
             Ofd_Menores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_Menores.ShowDialog() == DialogResult.OK)
@@ -154,11 +225,28 @@ namespace Recepcion
                     throw;
                 }
             }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_DPIMadreCopia.Text = nombre[nombre.Length - 1];
+            }
         }
 
         private void Btn_CertiNaci_Click(object sender, EventArgs e)
         {
-            Ofd_Menores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Menores.InitialDirectory = "C:\\Documents";
             Ofd_Menores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_Menores.ShowDialog() == DialogResult.OK)
@@ -173,11 +261,28 @@ namespace Recepcion
                     throw;
                 }
             }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_CertiNaci.Text = nombre[nombre.Length - 1];
+            }
         }
 
         private void Btn_CartaPoder_Click(object sender, EventArgs e)
         {
-            Ofd_Menores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Menores.InitialDirectory = "C:\\Documents";
             Ofd_Menores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_Menores.ShowDialog() == DialogResult.OK)
@@ -192,11 +297,28 @@ namespace Recepcion
                     throw;
                 }
             }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_CartaPoder.Text = nombre[nombre.Length - 1];
+            }
         }
 
         private void Btn_BoletaMenor_Click(object sender, EventArgs e)
         {
-            Ofd_Menores.InitialDirectory = "C:\\";
+            /*
+            Ofd_Menores.InitialDirectory = "C:\\Documents";
             Ofd_Menores.Filter = "Archivo PDF (*.PDF)|*.PDF";
 
             if (Ofd_Menores.ShowDialog() == DialogResult.OK)
@@ -210,6 +332,22 @@ namespace Recepcion
                 {
                     throw;
                 }
+            }
+            */
+
+            String[] nombre;
+            String fileUpload;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "allfiles|*.pdf";
+            DialogResult result = openFileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fileUpload = openFileDialog.FileName.ToString();
+                nombre = fileUpload.Split('\\');
+                Txt_BoletoOrnatoCopiaMenor.Text = nombre[nombre.Length - 1];
             }
         }
 

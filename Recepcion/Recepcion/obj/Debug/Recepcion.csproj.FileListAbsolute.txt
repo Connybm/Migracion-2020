@@ -5,3 +5,10 @@ C:\Users\Conny\Desktop\Recepcion\Recepcion\obj\Debug\Recepcion.Recepcion.resourc
 C:\Users\Conny\Desktop\Recepcion\Recepcion\obj\Debug\Recepcion.csproj.GenerateResource.cache
 C:\Users\Conny\Desktop\Recepcion\Recepcion\obj\Debug\Recepcion.dll
 C:\Users\Conny\Desktop\Recepcion\Recepcion\obj\Debug\Recepcion.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\bin\Debug\Recepcion.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\bin\Debug\Recepcion.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\obj\Debug\Recepcion.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\obj\Debug\Recepcion.Recepcion.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\obj\Debug\Recepcion.csproj.GenerateResource.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\obj\Debug\Recepcion.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\Ingenieria de Software\Primer Proyecto\Migracion-2020\Recepcion\Recepcion\obj\Debug\Recepcion.pdb

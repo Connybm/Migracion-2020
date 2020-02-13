@@ -13,7 +13,7 @@ namespace Recepcion
 		public void Ingresar_MayoresA(string cui, string urlMA)
 		{
 
-			string sql = "INSERT INTO documentos(nombre_tramite,cui,url_documento,estado_tramite)" +
+			string sql = "INSERT INTO documentos(nombre_documento,cui,url_documento,estado_documento)" +
 				"  VALUES ('" + "DPI " + "','" + cui + "','" + urlMA + "','Activado');";
 			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
 			command.ExecuteNonQuery();

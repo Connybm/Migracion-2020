@@ -18,8 +18,8 @@ namespace Recepcion
             InitializeComponent();
         }
 
-        string cui;
-        string tramite;
+        public string cui;
+        public int tramite;
         public string TipoTramite = " ";
 
         public void ObtenerCui(string cui)
@@ -27,7 +27,7 @@ namespace Recepcion
             this.cui = cui;
         }
 
-        public void ObtenerTramite(string tramite)
+        public void ObtenerTramite(int tramite)
         {
             this.tramite = tramite;
         }

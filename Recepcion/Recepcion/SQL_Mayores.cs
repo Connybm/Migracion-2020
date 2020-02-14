@@ -10,12 +10,12 @@ namespace Recepcion
     class SQL_Mayores
     {
         SQL_Conexion conectar = new SQL_Conexion();
-		public void Ingresar_Mayores(string tramite, string cui, string urlMayor, string ornato, string urlCopiaOrnato, string noBoleta)
+		public void Ingresar_Mayores(int tramite, string cui, string urlMayor, string ornato, string urlCopiaOrnato, string noBoleta)
 		{
-			string sql = "INSERT INTO documentos(id_tramite,nombre_documento,cui,url_documento,estado_documento)" +
-				"  VALUES ('" + tramite + "','" + "DPI" + "','" + cui + "','" + urlMayor + "','Activado')," +
-				"  ('" + tramite + "','" + "Boleto_Ornato" + "','" + ornato + "','" + urlCopiaOrnato + "' '" + "','Activado')," +
-				"  ('" + tramite + "','" + "No_Boleta" + "','" + cui + "','" + noBoleta + "' '" + "',0,'Activado');";
+			string sql = "INSERT INTO documentos(id_tramite,nombre_documento,cui,url_documento, no_documento,estado_documento)" +
+				"  VALUES ('" + tramite + "','" + "DPI" + "','" + cui + "','" + urlMayor + "','0','Activado')," +
+				"  ('" + tramite + "','" + "Boleto_Ornato" + "','" + ornato + "','" + urlCopiaOrnato + "' '" + "','0','Activado')," +
+				"  ('" + tramite + "','" + "No_Boleta" + "','" + cui + "','" + noBoleta + "' '" + "','0','Activado');";
 			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
 			command.ExecuteNonQuery();
 		}

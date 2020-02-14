@@ -10,18 +10,15 @@ namespace Recepcion
     class SQL_Menores
     {
         SQL_Conexion conectar = new SQL_Conexion();
-		public void Ingresar_Menores(string cui, string cuiM, string cuiP, string urlCP, string urlCM, string urlCertifNac, string urlCartaPoder, string ornato, string urlCopiaOrnato, string noBoleta)
-		{
-			string sql = "INSERT INTO documentos(nombre_documento,cui,url_documento,estado_documento)" +
-				"  VALUES ('" + "DPI_Padre" + "','" + cuiP + "','" + urlCP + "','Activado')," +
-				"  ('" + "DPI_Madre" + "','" + cuiM + "','" + urlCM + "','Activado')," +
-				"  ('" + "Certificado_nacimiento" + "','" + cui + "','" + urlCertifNac + "','Activado')," +
-				"  ('" + "Carta_Poder" + "','" + cui + "','" + urlCartaPoder + "','Activado')," +
-				"  ('" + "Boleto_Ornato" + "','" + ornato + "','" + urlCopiaOrnato + "','Activado')," +
-				"  ('" + "No_Boleta" + "','" + cui + "','" + noBoleta + "','Activado');";
-			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
-			command.ExecuteNonQuery();
-
-		}
-	}
+        public void Ingresar_Menores(string tramite, string cui, string cuiM, string cuiP, string urlCP, string urlCM, string urlCertifNac, string urlCartaPoder, string ornato, string urlCopiaOrnato, string noBoleta)
+        {
+            string sql = "INSERT INTO documentos(id_tramite,nombre_documento,cui,url_documento,estado_documento)" +
+                "  VALUES ('" + tramite + "','" + "DPI_Padre" + "','" + cuiP + "','" + urlCP + "' '" + "',0,'Activado')," +
+                "  ('" + tramite + "','" + "DPI_Madre" + "','" + cuiM + "','" + urlCM + "' '" + "',0,'Activado')," +
+                "  ('" + tramite + "','" + "Certificado_nacimiento" + "','" + cui + "','" + urlCertifNac + "' '" + "',0,'Activado')," +
+                "  ('" + tramite + "','" + "Carta_Poder" + "','" + cui + "','" + urlCartaPoder + "' '" + "',0,'Activado')," +
+                "  ('" + tramite + "','" + "Boleto_Ornato" + "','" + ornato + "','" + urlCopiaOrnato + "' '" + "',0,'Activado')," +
+                "  ('" + tramite + "','" + "No_Boleta" + "','" + cui + "','" + noBoleta + "' '" + "',0,'Activado');";
+        }
+    }
 }

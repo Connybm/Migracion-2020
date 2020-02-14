@@ -19,13 +19,18 @@ namespace Recepcion
         }
 
         string cui;
+        string tramite;
+        public string TipoTramite = " ";
 
-        public void obtenerCui(string cui)
+        public void ObtenerCui(string cui)
         {
             this.cui = cui;
         }
 
-        public string TipoTramite = " ";
+        public void ObtenerTramite(string tramite)
+        {
+            this.tramite = tramite;
+        }
 
         public void AsignarPestana(String Tipo)
         {
@@ -381,7 +386,7 @@ namespace Recepcion
         private void Btn_EnviarMenor_Click(object sender, EventArgs e)
         {
             SQL_Menores users = new SQL_Menores();
-            users.Ingresar_Menores(cui, Txt_DPIMadre.Text, Txt_DPIPadre.Text, Txt_DPIPadreCopia.Text, Txt_DPIMadreCopia.Text,
+            users.Ingresar_Menores(tramite, cui, Txt_DPIMadre.Text, Txt_DPIPadre.Text, Txt_DPIPadreCopia.Text, Txt_DPIMadreCopia.Text,
                 Txt_CertiNaci.Text, Txt_CartaPoder.Text, Txt_BoletoOrnatoMenor.Text, Txt_BoletoOrnatoCopiaMenor.Text, Txt_BoletaMenor.Text);
             this.Hide();
         }
@@ -389,14 +394,14 @@ namespace Recepcion
         private void Btn_EnviarMayoresA_Click(object sender, EventArgs e)
         {
             SQL_MayoresA users = new SQL_MayoresA();
-            users.Ingresar_MayoresA(Txt_DPIMayoresA.Text, Txt_DPICopiaMayoresA.Text);
+            users.Ingresar_MayoresA(tramite, cui, Txt_DPICopiaMayoresA.Text, Txt_BoletaMayoresA.Text);
             this.Hide();
         }
 
         private void Btn_EnviarMayores_Click(object sender, EventArgs e)
         {
             SQL_Mayores users = new SQL_Mayores();
-            users.Ingresar_Mayores(Txt_DPIMayores.Text, Txt_DPICopiaMayores.Text, Txt_BoletoOrnatoMayores.Text);
+            users.Ingresar_Mayores(tramite, cui, Txt_DPICopiaMayores.Text, Txt_BoletoOrnatoMayores.Text, Txt_BoletoOrnatoCopiaMayores.Text, Txt_BoletaMayores.Text);
             this.Hide();
         }
 

@@ -10,7 +10,7 @@ namespace Recepcion
     class SQL_Menores
     {
         SQL_Conexion conectar = new SQL_Conexion();
-        public void Ingresar_Menores(int tramite, string cui, string cuiM, string cuiP, string urlCP, string urlCM, 
+        public void Ingresar_Menores(string tramite, string cui, string cuiM, string cuiP, string urlCP, string urlCM, 
             string urlCertifNac, string urlCartaPoder, string ornato, string urlCopiaOrnato, string noBoleta)
         {
             string sql = "INSERT INTO documentos(id_tramite,nombre_documento,cui,url_documento, no_documento,estado_documento)" +

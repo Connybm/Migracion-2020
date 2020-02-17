@@ -13,7 +13,8 @@ namespace Recepcion
 		public void Ingresar_Bitacora(string cui, string accion, string fecha)
 		{
 
-			string sql = "INSERT INTO bitacora_usuarios (cui,accion_bitacora,fecha_bitacora) VALUES ('" + cui + "','" + accion + "','" + fecha + "');";
+			string sql = "INSERT INTO bitacora_usuarios (cui,accion_bitacora,fecha_bitacora) " +
+				"VALUES ('" + cui + "','" + accion + "','" + fecha + "');";
 			OdbcCommand command = new OdbcCommand(sql, conectar.conexion());
 			command.ExecuteNonQuery();
 

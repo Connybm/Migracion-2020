@@ -56,6 +56,7 @@
     <Compile Include="SQL_Mayores.cs" />
     <Compile Include="SQL_MayoresA.cs" />
     <Compile Include="SQL_Menores.cs" />
+    <Compile Include="SQL_TipoTramite.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Recepcion.resx">

@@ -12,7 +12,7 @@ namespace Recepcion
 		public OdbcConnection conexion()
 		{
 			// creacion de la conexion via ODBC
-			OdbcConnection conn = new OdbcConnection("Dsn=GCP");
+			OdbcConnection conn = new OdbcConnection("Dsn=Migracion");
 			try
 			{
 				conn.Open();

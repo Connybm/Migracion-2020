@@ -19,33 +19,56 @@ namespace Recepcion
         }
 
         public string cui;
-        public int tramite;
+        public string tramite;
         public string TipoTramite = " ";
+        SQL_Bitacora log = new SQL_Bitacora();
 
         public void ObtenerCui(string cui)
         {
             this.cui = cui;
         }
 
-        public void ObtenerTramite(int tramite)
+            SQL_TipoTramite tipoTramite = new SQL_TipoTramite();
+        public void ObtenerTramite(string tramite)
         {
             this.tramite = tramite;
+            tipoTramite.obtenerTipoTramite(cui, tramite);
+            TipoTramite = tipoTramite.tipoTramite;
+            AsignarPestana();
         }
 
-        public void AsignarPestana(String Tipo)
+        public void AsignarPestana()
         {
-            switch (Tipo)
+            if (TipoTramite == "Menor")
             {
-                case "Mayor de edad":
+                Tbc_Recepcion.SelectedIndex = 0;
+            }
+            else if(TipoTramite == "Mayor")
+            {
+                Tbc_Recepcion.SelectedIndex = 1;
+            }
+            else if(TipoTramite == "Mayor 60")
+            {
+                Tbc_Recepcion.SelectedIndex = 2;
+            }
+            else
+            {
+
+            }
+            /*
+             switch (TipoTramite )
+            {
+                case "Menor de edad":
                     Tbc_Recepcion.SelectedIndex = 0;
                     break;
-                case "Menor de edad":
+                case "Mayor de edad":
                     Tbc_Recepcion.SelectedIndex = 1;
                     break;
                 case "Adulto Mayor de 60 años":
                     Tbc_Recepcion.SelectedIndex = 2;
                     break;
             }
+             */
         }
 
         private void Btn_DPIMayoresACopia_Click(object sender, EventArgs e)

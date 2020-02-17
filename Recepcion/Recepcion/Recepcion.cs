@@ -254,6 +254,8 @@ namespace Recepcion
                 Txt_CertiNaci.Text, Txt_CartaPoder.Text, Txt_BoletoOrnatoMenor.Text, Txt_BoletoOrnatoCopiaMenor.Text, Txt_BoletaMenor.Text);
             this.Hide();
 
+            MessageBox.Show("Documentos Enviados.");
+
             log.Ingresar_Bitacora(cui, "Documentos enviados del Menor de Edad", fe.ToString());
         }
 
@@ -262,6 +264,8 @@ namespace Recepcion
             SQL_MayoresA users = new SQL_MayoresA();
             users.Ingresar_MayoresA(tramite, cui, Txt_DPICopiaMayoresA.Text, Txt_BoletaMayoresA.Text);
             this.Hide();
+
+            MessageBox.Show("Documentos Enviados.");
 
             log.Ingresar_Bitacora(cui, "Documentos enviados del Meyor de Edad", fe.ToString());
         }
@@ -272,6 +276,8 @@ namespace Recepcion
             users.Ingresar_Mayores(tramite, cui, Txt_DPICopiaMayores.Text, Txt_BoletoOrnatoMayores.Text,
                 Txt_BoletoOrnatoCopiaMayores.Text, Txt_BoletaMayores.Text);
             this.Hide();
+
+            MessageBox.Show("Documentos Enviados.");
 
             log.Ingresar_Bitacora(cui, "Documentos enviados del Meyor de 60 Años", fe.ToString());
         }
